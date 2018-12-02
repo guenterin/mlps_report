@@ -1,0 +1,40 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{Wi-Fi based indoor localization\\
+{\footnotesize Project for Machine Learning for Pervasive Systems ELEC-E7260}
+}
+
+\author{\IEEEauthorblockN{ Alexander Hefele}
+	\IEEEauthorblockA{\textit{alexander.hefele@aalto.fi}}
+	\and
+	\IEEEauthorblockN{ Rafael Pires}
+	\IEEEauthorblockA{\textit{rafael.piresorozco@aalto.fi}}
+}
+
+\maketitle
+
+\begin{abstract}
+The main idea in the project is to localize a moving object within an area surrounded by 20 Wi-Fi transceivers. In general the system is based on a iterative improvement of the received signal strength (RSS) measurement. Prior to a chain of signal processing algorithms there has to be a determination of the location which is currently performed by a best effort algorithm that takes the maximum change of the frame’s metrics into account.\\
+This paper describes the application of machine learning to the previously mentioned localization problem. This system will be trained and tested by sequential sampled RSS frames with varying frequencies. The subject will follow three different trajectories inside the observation area in which he will be stationary at several predetermined spots. The algorithm will be evaluated by comparing it to the accuracy of the current algorithm.
+\end{abstract}
+
+\section{Introduction}
+This document is a model and instructions for \LaTeX.
+Please observe the conference page limits. 
+
+
+%\begin{thebibliography}{00}
+%\bibitem{b1} G. Eason, B. Noble, and I. N. Sneddon, ``On certain integrals of Lipschitz-Hankel type involving products of Bessel functions,'' Phil. Trans. Roy. Soc. London, vol. A247, pp. 529--551, April 1955.
+%\end{thebibliography}
+\end{document}
