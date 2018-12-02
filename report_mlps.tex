@@ -34,11 +34,12 @@ This paper describes the application of machine learning to the previously menti
 \end{abstract}
 
 \section{Introduction}
-Nowadays we live in a world surrounded by Wi-Fi transceivers, a technology that keeps emerging as the main source for internet connection for people around the world. Until now it has only been used for this application and it will keep improving itself in the following years, but having this immense infrastructure could allow us to use it for other purposes besides data transmission (\textbf{VERY GOOD SO FAR}). \textit{This will be the topic we will explore in this document, Wi-Fi indoor based localization of objects.}\\
+Nowadays we live in a world surrounded by Wi-Fi transceivers, a technology that keeps emerging as the main source for internet connection for people around the world. Until now it has only been used for this application and it will keep improving itself in the following years, but having this immense infrastructure could allow us to use it for other purposes besides data transmission (\textbf{VERY GOOD SO FAR}). \textit{This will be the topic we will explore in this document, Wi-Fi indoor based localization of objects. (sounds somehow weird // can we just drop that sentence?)}\\
 \textit{Alex suggestion:}\\
 The general localization process which is shown in figure~\ref{fig:alg_bloc_diag} can be described as a iterative algorithm that uses two main components. First the position according to the current data has to be obtained. This information is now used to further improve the rather noisy RSS data by the following signal processing. Now the improved data set is once again applied to the same localization algorithm in order to get a more accurate information on subjects position.\\
 In the current solution for determining the subject's position only takes the the maximum change of the RSS within the area in consideration. This paper will describe whether an algorithm based on machine learning (ML) is able to improve the accuracy.\\
 \\
+\textit{orig:}\\
 In order to obtain the position an iterative process with two main components is ran: a localization algorithm, which determines the location based on the maximum change of the RSS in the current data; and a chain of signal processing, which helps to reduce the noisy data. In every iteration we improve error in the localization algorithm, obtaining a more accurate guess. Our aim is to find out if it's possible to obtain a better localization algorithm using Machine Learning tools.\\
 \begin{figure} [htbp!]
 	\centering
@@ -52,12 +53,19 @@ In order to obtain the position an iterative process with two main components is
 	\draw [->] (loc) -- (sig_proc);
 	\draw [->] (sig_proc.east) -- ++(.7,0) -- ++(0,1) -- (-1.7,1) -- (-1.7,0) -- (loc.west);
 	\end{tikzpicture}
-	\caption{Block diagram of the localization process}
+	\caption{Block diagram for the localization process}
 	\label{fig:alg_bloc_diag}
 \end{figure}
 \\
 \textit{different frequencies are used!}\\
+\textit{Alex suggestion:}\\
+The data set used to train and testthat algorithm provides matrices which show the distribution of RSS among the considered two dimensional area. For each time step it provides 15 different frames with varying frequencies and they are taken approximately periodically. Within the three trajectories of the subject there are specific markings where the position is known. Those are also marked in the data set and will make the frame eligible for the ML algorithm.  
+\\
+\\
+\textit{orig:}\\
 The data that is used for this research are matrices, in which the x,y values are the position inside a room and it's content symbolizes the change in RSS; the time interval in between frames; and the position of the subject, only available if it's in a marked location. There is a big loss in the process of obtaining this data and there is undesired noisy values which make the designed algorithm not truly effective. We will find out if a Machine Learning approach will be able to locate more accurately.\\
+\textit{SUGGESTION:}\\
+\textit{This is a temporary paragraph (the algorithm is not clear yet):}\\
 In order to complete our task we will explore different Machine Learning algorithms and consider using one that will help us in this task. One option we considered is using Neural Networks, which consist in a set of algorithms modeled loosely after the human brain that are designed to recognize patterns, labeling or clustering the raw input of data.
 
 %\begin{thebibliography}{00}
